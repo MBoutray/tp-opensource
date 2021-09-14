@@ -26,3 +26,4 @@ Initially, the port is defined on line 3 of the `server.js` file ( PORT = ... ||
 ```bash PORT=9999 node server.js```
 The command will change the constant on line 3 to the number you entered. In this case: 9999
 Initially, the port is defined on line 3 of the `server.js` file ( PORT = ... || 3000). However, it is possible to use a different one with the following example:
+```bash PORT=4000 node server.js```
