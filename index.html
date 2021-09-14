@@ -9,44 +9,22 @@
 </head>
 
 <body>
-    <h1>FILM du Studio Ghibli</h1>
-    <section id="film_cards">
+    <main id="main">
 
-    </section>
-    <script>
-  function createNode(element) {
-    return document.createElement(element);
-}
+        <div class="movie">
+            <img src="" alt="image">
 
-function append(parent, el) {
-  return parent.appendChild(el);
-}
+            <div class="movie-info">
+                <h3>Movie Title</h3>
+                <span></span>
+            </div>
+            <div class="overview">
+                
+            </div>
+        </div>
 
-const section = document.getElementById('film_cards');
-const url = 'https://ghibliapi.herokuapp.com/films/?fields=title,description';
-
-fetch(url)
-.then((resp) => resp.json())
-.then(function(data) {
-  let films = data;
-  return films.map(function(film) {
-    let card = createNode('div');
-    let titre = createNode('h3');
-    let description = createNode('p');
-
-    titre.innerHTML = `${film.title}`;
-    description.innerHTML = `${film.description}`;
-    
-    append(card, titre);
-    append(card, description);
-    append(section, card);
-  })
-})
-.catch(function(error) {
-  console.log(error);
-});
-    </script>
-
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
