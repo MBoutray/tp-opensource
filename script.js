@@ -28,16 +28,18 @@ function showMovies(data) {
         const movie1 =document.createElement('div');
         movie1.classList.add('movie');
         movie1.innerHTML = `
-        <img src="${IMG_URL+poster_path}" alt="${title}"
+        <img src="${IMG_URL+poster_path}" alt="${title}">
         
-        <div class="movie-info">
-        <h3>${title}</h3>
-        <span>${vote_average}</span>
-        </div>
+        <div class="info-container">
+            <div class="movie-info">
+                <h2>${title}</h2>
+                <p>${vote_average}</p>
+            </div>
 
-        <div class="overview">
-        <h3>Overview</h3>
-        ${overview};
+            <div class="overview">
+                <h3>Overview</h3>
+                ${overview};
+            </div>
         </div>
         
         `
