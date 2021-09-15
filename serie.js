@@ -24,15 +24,15 @@ function showMovies(data) {
     main.innerHTML = '';
 
     data.forEach(movie=> {
-        const {name, poster_path, vote_average, overview} = movie;
+        const {original_name, poster_path, vote_average, overview} = movie;
         const movie1 =document.createElement('div');
         movie1.classList.add('movie');
         movie1.innerHTML = `
-        <img src="${IMG_URL+poster_path}" alt="${name}">
+        <img src="${IMG_URL+poster_path}" alt="${original_name}">
         
         <div class="info-container">
             <div class="movie-info">
-                <h2>${name}</h2>
+                <h2>${original_name}</h2>
                 <p>${vote_average}</p>
             </div>
 
